@@ -17,7 +17,7 @@ export function classes(...classes: (string | false | undefined | null)[]): stri
  */
 export function extend(...objects: (types.NestedCSSProperties | undefined | null)[]): types.NestedCSSProperties {
   /** The final result we will return */
-  const result: types.CSSProperties & Dictionary = {};
+  const result: types.CSSProperties & Dictionary = WeakMap ? new WeakMap(): {};
   for (const object of objects) {
     if (object == null || object === false) {
       continue;
