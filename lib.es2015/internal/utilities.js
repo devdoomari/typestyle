@@ -21,6 +21,7 @@ export function extend() {
     }
     /** The final result we will return */
     var result = WeakMap ? new WeakMap() : {};
+    debugger;
     for (var _a = 0, objects_1 = objects; _a < objects_1.length; _a++) {
         var object = objects_1[_a];
         if (object == null || object === false) {
